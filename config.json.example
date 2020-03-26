@@ -1,0 +1,10 @@
+{
+  "token": str,
+  "description": str,
+  "command_prefix": str,
+  "case_insensitive": bool,
+  "owner_id": int,
+  "dev_mode": {
+    "debug": bool
+  }
+}
