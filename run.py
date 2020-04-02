@@ -1,5 +1,5 @@
-from App.bot import bot, config
 from Exts.discord_presense_task import change_status
+from App.bot import bot, config
 
 
 @bot.event
@@ -10,7 +10,8 @@ async def on_ready():
     await change_status.start()
 
 
-bot.remove_command("help")
-# Cog Extension
+bot.load_extension("Cogs.stock")
+bot.load_extension("Cogs.Events")
+bot.load_extension("Cogs.Admin")
 
 bot.loop.run_until_complete(bot.run(config["token"]))
